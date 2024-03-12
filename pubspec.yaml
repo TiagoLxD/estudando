@@ -45,6 +45,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  http: ^1.2.1
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -62,7 +64,21 @@ flutter:
     - images/padrao.png
     - images/papel.png
     - images/pedra.png
-    - images/logo.png
+    - images/logo_atm.png
+    - images/menu_servico.png
+    - images/menu_empresa.png
+    - images/menu_contato.png
+    - images/menu_cliente.png
+    - images/detalhe_servico.png
+    - images/detalhe_cliente.png
+    - images/detalhe_contato.png
+    - images/detalhe_empresa.png
+    - images/logo_cara.png
+    - images/botao_jogar.png
+    - images/botao_voltar.png
+    - images/moeda_cara.png
+    - images/moeda_coroa.png
+
 
     
   # An image asset can refer to one or more resolution-specific "variants", see

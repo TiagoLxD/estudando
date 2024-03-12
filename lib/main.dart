@@ -1,6 +1,15 @@
-import 'package:estudando/combustivel.dart';
+import 'package:estudando/JogoCaraCoroa.dart';
+import 'package:estudando/RequestTest.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(title: "Alcohol ou gasolina", home: Combustivel()));
+  runApp(MaterialApp(
+    initialRoute: "/",
+    routes: {
+      "/jogo": (context) => JogoCaraCoroa(),
+    },
+    title: "Consumo de service web",
+    home: RequestTest(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
