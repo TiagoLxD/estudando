@@ -10,13 +10,19 @@ class RequestTest extends StatefulWidget {
 }
 
 class _RequestTestState extends State<RequestTest> {
+  String resultado = "";
+  TextEditingController _controller = TextEditingController();
   _recuperarCep() async {
-    String url = "https://viacep.com.br/ws/13365000/json/";
+    String cep = _controller.text;
+    String url = "https://viacep.com.br/ws/${cep}/json/";
 
     http.Response response = await http.get(Uri.parse(url));
 
     Map<String, dynamic> parseJson = json.decode(response.body);
-    print(parseJson['logradouro']);
+
+    setState(() {
+      resultado = parseJson['logradouro'];
+    });
   }
 
   @override
@@ -28,7 +34,16 @@ class _RequestTestState extends State<RequestTest> {
       body: Container(
         child: Column(
           children: [
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'CEP',
+              ),
+              style: TextStyle(fontSize: 20),
+              controller: _controller,
+            ),
             ElevatedButton(onPressed: _recuperarCep, child: Text('Clique')),
+            Text(resultado),
           ],
         ),
       ),

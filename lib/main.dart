@@ -1,15 +1,14 @@
-import 'package:estudando/JogoCaraCoroa.dart';
-import 'package:estudando/RequestTest.dart';
+import 'package:estudando/Bitcon.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: "/",
-    routes: {
-      "/jogo": (context) => JogoCaraCoroa(),
-    },
+    // initialRoute: "/",
+    // routes: {
+    //   "/jogo": (context) => JogoCaraCoroa(),
+    // },
     title: "Consumo de service web",
-    home: RequestTest(),
+    home: Bitcoin(),
     debugShowCheckedModeBanner: false,
   ));
 }
